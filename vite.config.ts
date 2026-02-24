@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  publicDir: 'src/shared/data',
   plugins: [
     react(),
     tailwindcss(),
