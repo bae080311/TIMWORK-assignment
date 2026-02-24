@@ -1,4 +1,7 @@
-import { metadata } from "@shared/config/index";
+import rawMetadata from "@shared/data/metadata.json";
+import type { RawMetadata } from "@shared/types/metadata";
+
+const metadata = rawMetadata as RawMetadata;
 import DrawList from "@widgets/draws/ui/DrawList";
 
 function DrawsPage() {

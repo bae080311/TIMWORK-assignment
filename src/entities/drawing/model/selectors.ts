@@ -1,4 +1,7 @@
-import { metadata } from "@shared/config";
+import rawMetadata from "@shared/data/metadata.json";
+import type { RawMetadata } from "@shared/types/metadata";
+
+const metadata = rawMetadata as RawMetadata;
 import type { DisciplineData } from "@shared/types/metadata";
 import type {
   DrawingListItem,
