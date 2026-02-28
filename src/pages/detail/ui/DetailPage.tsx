@@ -21,7 +21,7 @@ export default function DetailPage() {
             <h1 className="text-2xl font-bold text-gray-900 mb-8">
               {drawing.name}
             </h1>
-            <DrawingDetail drawing={drawing} />
+            <DrawingDetail key={drawing.id} drawing={drawing} />
           </>
         ) : (
           <p className="text-sm text-gray-500">도면을 찾을 수 없습니다.</p>

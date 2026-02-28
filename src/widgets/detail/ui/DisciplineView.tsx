@@ -69,8 +69,8 @@ export default function DisciplineView({ drawing }: Props) {
           const allRevs = [
             ...d.revisions,
             ...d.regions.flatMap((r) => r.revisions),
-          ];
-          const latestRev = allRevs[allRevs.length - 1];
+          ].sort((a, b) => b.date.localeCompare(a.date));
+          const latestRev = allRevs[0];
           return (
             <button
               key={d.name}
