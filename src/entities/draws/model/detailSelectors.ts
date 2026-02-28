@@ -52,11 +52,11 @@ export function buildHistory(detail: DrawingDetail): HistoryEntry[] {
 export function getOverlayImage(discipline: DisciplineDetail): string | undefined {
   if (discipline.baseImage) return discipline.baseImage
   if (discipline.revisions.length > 0) {
-    return [...discipline.revisions].sort((a, b) => b.date.localeCompare(a.date))[0].image
+    return discipline.revisions.reduce((a, b) => (a.date > b.date ? a : b)).image
   }
   const allRegionRevs = discipline.regions.flatMap(r => r.revisions)
   if (allRegionRevs.length > 0) {
-    return [...allRegionRevs].sort((a, b) => b.date.localeCompare(a.date))[0].image
+    return allRegionRevs.reduce((a, b) => (a.date > b.date ? a : b)).image
   }
   return undefined
 }
