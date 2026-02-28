@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { DrawingDetail as DrawingDetailType } from "@entities/drawing/model/detailTypes";
+import type { DrawingDetail as DrawingDetailType } from "@entities/draws/model/detailTypes";
 import DisciplineView from "./DisciplineView";
 import HistoryView from "./HistoryView";
 import OverlayView from "./OverlayView";

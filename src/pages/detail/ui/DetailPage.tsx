@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { getDrawingById } from "@entities/drawing/model/detailSelectors";
+import { getDrawingById } from "@entities/draws/model/detailSelectors";
 import DrawingDetail from "@widgets/detail/ui/DrawingDetail";
 
 export default function DetailPage() {
