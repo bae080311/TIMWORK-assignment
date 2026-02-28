@@ -1,5 +1,5 @@
-import { getDrawingList } from "@entities/drawing/model/selectors";
-import DrawingCard from "@entities/drawing/ui/DrawingCard";
+import { getDrawingList } from "@entities/draws/model/selectors";
+import DrawingCard from "@entities/draws/ui/DrawingCard";
 
 export default function DrawList() {
   const drawings = getDrawingList();

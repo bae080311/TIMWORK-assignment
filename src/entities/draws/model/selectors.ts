@@ -24,6 +24,7 @@ function getLatestRevision(discipline: DisciplineData): RevisionSummary | null {
       version: latest.version,
       date: latest.date,
       description: latest.description,
+      changes: latest.changes ?? [],
     };
   }
 
@@ -33,6 +34,7 @@ function getLatestRevision(discipline: DisciplineData): RevisionSummary | null {
     version: latest.version,
     date: latest.date,
     description: latest.description,
+    changes: latest.changes ?? [],
   };
 }
 
